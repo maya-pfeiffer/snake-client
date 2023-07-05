@@ -11,10 +11,6 @@ const connect = function() {
 
     const name = "MIP";
     conn.write(`Name: ${name}`);
-    conn.write("Move: up");
-    //conn.write("Move: down");
-    //conn.write("Move: left");
-    //conn.write("Move: right");
   })
 
 
