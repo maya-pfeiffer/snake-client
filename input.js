@@ -26,7 +26,26 @@ const handleUserInput = function(key) {
   if (key === 'a') {
     connection.write('Move: left');
   };
-}
+  if (key === "c") {
+    sendServerMessage1("Hi everybody!");
+  }
+  if (key === "m") {
+    sendServerMessage1("sssnekin' time!");
+  }
+  if (key === " ") {
+    sendServerMessage1("Sneks are kool");
+  }
+  };
+
+const sendServerMessage1 = function(message) {
+  connection.write(`Say: ${message}`)
+};
+const sendServerMessage2 = function(message) {
+  connection.write(`Say: ${message}`)
+};
+const sendServerMessage3 = function(message) {
+  connection.write(`Say: ${message}`)
+};
 
 module.exports = {
   setupInput
