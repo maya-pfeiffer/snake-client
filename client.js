@@ -6,6 +6,13 @@ const connect = function() {
   });
   conn.setEncoding("utf8");
 
+  conn.on("connect", function() {
+    console.log("Successfully connected to game server")
+  })
+
+  const name = "MIP";
+  conn.write(`Name: ${name}`);
+
   conn.on("data", function(data) {
     console.log("Received data: ", data);
   })
